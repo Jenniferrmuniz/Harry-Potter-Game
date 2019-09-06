@@ -8,7 +8,7 @@ SpaceBlaster.Ship.prototype = new Game.Object();
 
 SpaceBlaster.Ship.prototype.setDefaults = function() {
 	this.fireButtonReleased = true;
-	this.image =  new Game.Image('images/ronWand.png'),
+	this.image =  new Game.Image('images/harry-wand.png'),
 	this.missiles =  [],
 	this.now = 0;
 	this.then = 0;

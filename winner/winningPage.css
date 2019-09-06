@@ -1,6 +1,86 @@
 body{
-    background-image: url('../img/backgrounds/background3.jpg');
+    background-image: url('../img/backgrounds/background6.jpg');
     background-repeat: no-repeat;
-    width: 100%;
+    background-size: 100%;
     background-position: center center;
+    font-family: "harry_pregular";
+
+}
+
+
+.glow {
+    font-family: "harry_pregular";
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    margin: 85px 20px;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ffff00, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #c94118, 0 0 40px #c94118, 0 0 50px #c94118, 0 0 60px #4da0ff, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+
+  .rotate {
+    animation: rotation 2s infinite linear;
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(-10deg);
+    }
+    to {
+      transform: rotate(10deg);
+    }
+  }
+  
+
+
+
+
+  #characters-div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+  }
+
+
+  #characters-div img{
+    height: 30px;
+  }
+
+
+
+
+
+
+
+a {
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  width: 50px;
+  background: transparent;
+  color: red;
+  letter-spacing: 4px;
+  -webkit-animation-name: yellowPulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes yellowPulse {
+  from { background-color: rgba(191, 191, 1, .1); -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: rgba(255, 255, 0, .1); -webkit-box-shadow: 0 0 18px #ffff00; }
+  to { background-color: rgba(191, 191, 1, .1); -webkit-box-shadow: 0 0 9px #333; }
 }

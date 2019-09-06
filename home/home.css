@@ -9,15 +9,17 @@ body{
 }
 
 
+
 .glow {
     font-family: "harry_pregular";
-    font-size: 120px;
+    font-size: 140px;
     color: #fff;
     text-align: center;
     -webkit-animation: glow 3s ease-in-out infinite alternate;
     -moz-animation: glow 3s ease-in-out infinite alternate;
     animation: glow 3s ease-in-out infinite alternate;
     margin: 20px;
+    letter-spacing: 4px;
   }
   
   @-webkit-keyframes glow {
@@ -42,6 +44,24 @@ body{
 }
 
 
+#myBtn:focus {
+    outline:none;
+}
+
+
+.zoom {
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+
+
+
+
+
 #footies{
     position: relative;
 }
@@ -63,7 +83,7 @@ body{
     width: 0%; /* Full width */
     height: 0%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, .5); /* Fallback color */
     transition: all 0.5s;
   }
   .modal.open {
@@ -144,6 +164,12 @@ body{
     background-color: rgba(255, 255, 255, .6);
     border: 3px inset black;
     margin-top: 15px;
+}
+
+
+
+#mischief-btn button:focus {
+    outline:none;
 }
 
  .footprint{

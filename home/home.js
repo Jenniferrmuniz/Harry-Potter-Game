@@ -9,7 +9,6 @@ document.querySelector("#mischief-btn").onclick = function() {
 
 
 
-// Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -20,16 +19,23 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal & start footprints
 btn.onclick = function() {
+    console.log('hiiii')
+// Get the modal
     //modal.style.display = "block";
+    //modal = document.getElementById("myModal");
     modal.className = 'open modal';
 
-    var NavWidth=$(modal).width();
-    var NavHeight = $(modal).height();
+    // var NavWidth=$(modal).width();
+    // var NavHeight = $(modal).height();
+
+    var NavWidth = window.innerWidth;
+    var NavHeight = window.innerHeight;
     var x = NavWidth/2;
     var y = NavHeight/2;
     var rotation = 0;
     var crit = 0;
 
+    console.log(NavHeight, NavWidth)
 
 
 console.log('hi');
@@ -43,27 +49,27 @@ console.log('hi');
 		    random = Math.floor((Math.random()*360));
 
         //Check if the "character" will come out of the screen
-		// if(x + Math.cos((random/180)*Math.PI)*50<0||y + Math.sin((random/180)*Math.PI)*50<0||x + Math.cos((random/180)*Math.PI)*50>NavWidth||y +Math.sin((random/180)*Math.PI)*50>NavHeight ) {
-		// 	//If so, he makes a U-turn
-		// 	random += 180;
-		// 	break;
-        // }
-
-        let dimensions = $('#footies')[0].getBoundingClientRect(); 
-        console.log(dimensions, x, y)
-        if(y < dimensions.top || y > dimensions.bottom || x < dimensions.left || x > dimensions.right){
-            //If so, he makes a U-turn
-            console.log('walk????')
-
-
-            // x = dimensions.x + ( dimensions.width / 2 ) 
-            // y = dimensions.y + ( dimensions.height / 2 ) 
-
-            // x = window.innerWidth/2 - 100
-            // y = window.innerHeight/2 - 100
-            random += 180;
-            break;
+		if(x + Math.cos((random/180)*Math.PI)*50<0||y + Math.sin((random/180)*Math.PI)*50<0||x + Math.cos((random/180)*Math.PI)*50>NavWidth||y +Math.sin((random/180)*Math.PI)*50>NavHeight ) {
+			//If so, he makes a U-turn
+			random += 180;
+			break;
         }
+
+        // let dimensions = $('#footies')[0].getBoundingClientRect(); 
+        // console.log(dimensions, x, y)
+        // if(y < dimensions.top || y > dimensions.bottom || x < dimensions.left || x > dimensions.right){
+        //     //If so, he makes a U-turn
+        //     console.log('walk????')
+
+
+        //     // x = dimensions.x + ( dimensions.width / 2 ) 
+        //     // y = dimensions.y + ( dimensions.height / 2 ) 
+
+        //     // x = window.innerWidth/2 - 100
+        //     // y = window.innerHeight/2 - 100
+        //     random += 180;
+        //     break;
+        // }
 
         
 		//Check if the program is not stuck in the loop, if so fade after 10 iterations
@@ -91,8 +97,8 @@ console.log('hi');
 	    footprint.style.webkitTransform = "rotate("+rotation+"deg)";
         
         //Adding the item in the body
-        //document.body.appendChild(footprint);
-        $('.modal .modal-content').append(footprint)
+        document.body.appendChild(footprint);
+        //$('.modal .modal-content').append(footprint)
     }
 
     //Call the walk () function every second

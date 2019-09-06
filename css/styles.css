@@ -10,7 +10,7 @@ body{
     font-family: "harry_pregular";
   }
   
-  .game-intro {
+.game-intro {
     float: left;
     width: 600px;
     height: 600px;
@@ -20,19 +20,21 @@ body{
     margin: 50px;
   }
   
-  .game-intro p {
+.game-intro p {
     margin-top: 10px;
     font-size: 24px;
     color: rgb(255, 255, 0);
     width: 80%;
   }
 
-  .character-talking{
+.character-talking{
     display:flex;
     flex-direction: row;
+    
+ 
   }
 
-  .speech-bubble {
+.speech-bubble {
     position: relative;
     background: rgba(255, 255, 255, .5);
     border-radius: 4em;
@@ -43,8 +45,10 @@ body{
     height: 50%;
     margin-left: 35px;
    }
+
+
   
-   .speech-bubble:after {
+.speech-bubble:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -58,22 +62,29 @@ body{
     margin-left: -26px;
     margin-bottom: -52px;
   }
+
+
+.speech-bubble p{
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-style: italic;
+}
  
 .intro-div{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 @-webkit-keyframes yellowPulse {
-  from { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
-  50% { background-color: #ffff00; -webkit-box-shadow: 0 0 18px #ffff00; }
-  to { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
+    from { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #ffff00; -webkit-box-shadow: 0 0 18px #ffff00; }
+    to { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
 }
 
   
-  #start-button{
+#start-button{
     font-size: 30px;
     color: black;
     padding: 20px 40px;
@@ -85,6 +96,10 @@ body{
     -webkit-animation-iteration-count: infinite;
   }
 
+
+#start-button:focus {
+    outline:none;
+}
 
   
   

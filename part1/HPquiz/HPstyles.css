@@ -1,6 +1,6 @@
 body {
 	color: #413D3D;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Cinzel', serif;
 	width: 95%;
     text-align: center;
     margin: 0 auto;
@@ -46,11 +46,17 @@ button {
       padding: 10px 0;
       background-color: black;
       color: #fff;
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Cinzel', serif;
 	  -webkit-border-radius: 1000px;
       border-radius: 1000px;
       outline: none;
       border: none;
+      font-style: italic;
+}
+
+
+button:focus {
+    outline:none;
 }
 
 button:active {
