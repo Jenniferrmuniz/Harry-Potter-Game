@@ -66,18 +66,28 @@ body{
 }
 
 
+@-webkit-keyframes yellowPulse {
+  from { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #ffff00; -webkit-box-shadow: 0 0 18px #ffff00; }
+  to { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
+}
 
   
   #start-button{
     font-size: 30px;
-    background-color: rgb(255, 255, 0);
     color: black;
     padding: 20px 40px;
     border: 3px outset black;
     border-radius: 5px;
     margin-bottom: 20px;
-
+    -webkit-animation-name: yellowPulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
   }
+
+
+  
+  
   
   #game-board {
       float: left;

@@ -20,12 +20,12 @@ window.onload = function () {
 
 
 
-        //Creating player (RON)
-        var ron = new Image();
-        ron.onload = function () {
-            ctx.drawImage(ron, player.x, player.y, 50, 50);
+        //Creating player (HARRY)
+        var harry = new Image();
+        harry.onload = function () {
+            ctx.drawImage(harry, player.x, player.y, 50, 50);
         }
-        ron.src = "../img/characters/ronFlying.png"
+        harry.src = "../img/characters/harryFlying.png"
 
 
         var player = {
@@ -72,7 +72,7 @@ window.onload = function () {
         books.onload = function () {
             ctx.drawImage(books, library.x, library.y, 50, 50);
         }
-        books.src = "../img/icons-&-items/books.png"
+        books.src = "../img/icons-&-items/book-icon.png"
 
 
         var library = {
@@ -154,7 +154,7 @@ window.onload = function () {
         function updateCanvas() {
             ctx.clearRect(0, 0, 400, 500);
             drawBoardGame();
-            draw(player, ron);
+            draw(player, harry);
             draw(library, books);
             endGoal();
             window.requestAnimationFrame(updateCanvas);

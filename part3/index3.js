@@ -17,12 +17,12 @@ window.onload = function () {
 
 
 
-        //Creating player (RON)
-        var ron = new Image();
-        ron.onload = function () {
-            ctx.drawImage(ron, player.x, player.y, 50, 50);
+        //Creating player (HARRY)
+        var harry = new Image();
+        harry.onload = function () {
+            ctx.drawImage(harry, player.x, player.y, 50, 50);
         }
-        ron.src = "../img/characters/ronFlying.png"
+        harry.src = "../img/characters/harryFlying.png"
 
 
         var player = {
@@ -69,7 +69,7 @@ window.onload = function () {
         darkArts.onload = function () {
             ctx.drawImage(darkArts, defenseClass.x, defenseClass.y, 50, 50);
         }
-        darkArts.src = "../img/icons-&-items/wand-icon.png"
+        darkArts.src = "gallaga/images/dementor.png"
 
 
         var defenseClass = {
@@ -150,7 +150,7 @@ window.onload = function () {
         function updateCanvas() {
             ctx.clearRect(0, 0, 400, 500);
             drawBoardGame();
-            draw(player, ron);
+            draw(player, harry);
             draw(defenseClass, darkArts);
             endGoal();
             window.requestAnimationFrame(updateCanvas);

@@ -43,12 +43,12 @@ $(document).ready(function() {
         //     answer: 2},
         {
             question: "What do Harry and Ron crash into when they fly Arthur Weasley's car to Hogwarts?",
-            choices: ['The Great Lake', 'The Whomping Willow', 'The Astronomy Tower', ''],
+            choices: ['The Great Lake', 'The Whomping Willow', 'The Astronomy Tower', 'The Leaky Cauldron'],
             answer: 1},
         {
             question: "Which family was Dobby originally bound to serve?",
-            choices: ['The Blacks', 'The Malfoys', 'The Weasleys', ''],
-            answer: 1},
+            choices: ['The Blacks', 'The Potters', 'The Weasleys', 'The Malfoys'],
+            answer: 3},
         // {
         //     question: "What item of clothing grants Dobby his freedom?",
         //     choices: ['An old hat', 'A slimy sock', 'A broken shoe', ''],
@@ -59,7 +59,7 @@ $(document).ready(function() {
         //     answer: 2},
         {
             question: "In Deathly Hallows, Lord Voldemort has a ‘Taboo’ put on his name. What does this mean, exactly?",
-            choices: ['It is impossible to say his name out loud', 'Voldemort can see inside that person\'s mind', 'Whoever says his name is trackable', ''],
+            choices: ['It is impossible to say his name out loud', 'Voldemort can see inside that person\'s mind', 'Whoever says his name is trackable', 'Any protective spells on the speaker will stop working'],
             answer: 2},
         {
             question: "What is the last spell Harry uses against Voldemort at the battle of Hogwarts?",

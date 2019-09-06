@@ -1,12 +1,44 @@
 body{
     font-family: Apple-chancery;
+    background-image: url('../img/backgrounds/background4.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#myBtn img{
-    background-image: url('../img/backgrounds/oldPaper.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+
+.glow {
+    font-family: "harry_pregular";
+    font-size: 120px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    margin: 20px;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffff00, 0 0 40px #ffff00, 0 0 50px #ffff00, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #4da0ff, 0 0 40px #4da0ff, 0 0 50px #4da0ff, 0 0 60px #4da0ff, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+#myBtn{
+    padding: 0;
+    margin: 0;
     border-radius: 20px;
+    background: transparent;
+    border: transparent;
+    margin: 30px;
+}
+#myBtn img{
+    width: 300px;
 }
 
 
@@ -71,12 +103,18 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
 }
 
-#map img{
+.map-icon{
     margin: 120px 15px;
-    height: 40px;
+    width: 70px;
     opacity: .75;
+}
+
+.arrow{
+    height: 25px;
+
 }
 
 
@@ -84,6 +122,16 @@ body{
     block-size: 100%;
     margin:15px;
 }
+
+#welcome{
+    font-weight: 900;
+    font-size: 20px;
+}
+#writing li{
+    list-style-type: none;
+}
+
+
 
 #mischief-btn{
     block-size: 100%;
