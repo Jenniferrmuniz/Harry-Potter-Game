@@ -130,7 +130,7 @@ $(document).ready(function() {
       if(optionFinal == 0 || optionFinal == 1){
         document.querySelector("#try-again").innerHTML = 'Finish';
         $("#try-again").click(function(){
-          window.open('../../part2/index2.html', '_self');
+          window.open('../../part2/part2.html', '_self');
         })
       }
       else{

@@ -1,7 +1,7 @@
 
 
 document.querySelector("#mischief-btn").onclick = function() {
-    window.open("../part1/index.html", '_self')
+    window.open("../part1/part1.html", '_self');
 }
 
 
@@ -55,21 +55,6 @@ console.log('hi');
 			break;
         }
 
-        // let dimensions = $('#footies')[0].getBoundingClientRect(); 
-        // console.log(dimensions, x, y)
-        // if(y < dimensions.top || y > dimensions.bottom || x < dimensions.left || x > dimensions.right){
-        //     //If so, he makes a U-turn
-        //     console.log('walk????')
-
-
-        //     // x = dimensions.x + ( dimensions.width / 2 ) 
-        //     // y = dimensions.y + ( dimensions.height / 2 ) 
-
-        //     // x = window.innerWidth/2 - 100
-        //     // y = window.innerHeight/2 - 100
-        //     random += 180;
-        //     break;
-        // }
 
         
 		//Check if the program is not stuck in the loop, if so fade after 10 iterations
