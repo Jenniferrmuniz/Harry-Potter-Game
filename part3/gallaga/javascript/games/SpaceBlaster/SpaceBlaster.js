@@ -123,7 +123,4 @@ function endGallaga(){
 			}
 		}
 	}
-	// if(completion == 5){
-	// 	console.log("hi")
-	// }
 })();

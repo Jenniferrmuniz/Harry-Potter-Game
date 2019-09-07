@@ -1,5 +1,7 @@
 //VOLDEMORT BATTLE
 
+let direction = 'right';
+
 window.onload = function () {
     document.getElementById("start-button").onclick = function () {
         startGame();
@@ -16,11 +18,18 @@ window.onload = function () {
 
 
         //Creating player (HARRY)
-        var harry = new Image();
-        harry.onload = function () {
-            ctx.drawImage(harry, player.x, player.y, 50, 50);
+        var harryRight = new Image();
+        harryRight.onload = function () {
+            ctx.drawImage(harryRight, player.x, player.y, 50, 50);
         }
-        harry.src = "../img/characters/harryFlying.png"
+        harryRight.src = "../img/characters/harryFlying.png"
+
+
+        var harryLeft = new Image();
+        harryLeft.onload = function () {
+            ctx.drawImage(harryLeft, player.x, player.y, 50, 50);
+        }
+        harryLeft.src = "../img/characters/harryFlyingLeft.png"
 
 
         var player = {
@@ -33,6 +42,7 @@ window.onload = function () {
                 p.x -=50
                 if(!checkAllCollisions(p, rectangles)){
                     player.x -= 50 }
+                direction = 'left';
                 },
     
                 
@@ -41,8 +51,9 @@ window.onload = function () {
                 p.x +=50
                 if(!checkAllCollisions(p, rectangles)){
                     player.x += 50 }
-                }
-                ,
+                direction = 'right';
+                },
+
             moveUp: function () {
                 let p = {...player};
                 p.y -=50
@@ -82,6 +93,12 @@ window.onload = function () {
 
         //Draw image onto canvas
         function draw(obj, img) {
+            if(obj == player){
+                switch(direction){
+                    case 'right': img = harryRight; break;
+                    case 'left': img = harryLeft; break;
+                }
+            }
             ctx.drawImage(img, obj.x, obj.y, 50, 50)
         }
 
@@ -148,7 +165,7 @@ window.onload = function () {
         function updateCanvas() {
             ctx.clearRect(0, 0, 400, 500);
             drawBoardGame();
-            draw(player, harry);
+            draw(player, null);
             draw(battle, wand);
             endGoal();
             window.requestAnimationFrame(updateCanvas);

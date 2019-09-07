@@ -1,6 +1,6 @@
 SpaceBlaster.Missile = function(ship) {
 	var properties = {
-		image:  new Game.Image('images/missile.png'),
+		image:  new Game.Image('images/blueLazer.png'),
 		width: 26,
 		height: 46,
 		speed: 900,

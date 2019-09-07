@@ -79,11 +79,25 @@ canvas {
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 5% auto; /* 15% from the top and centered */
-  padding: 5px;
-  border: 1px solid #888;
+  padding: 10px;
+  border: 6px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
   height:50%;
-  disaply:flex;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.modal-content p{
+	margin: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.modal-content a{
+	color: rgb(255, 255, 0);
 }
 
 .modal.open {

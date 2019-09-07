@@ -2,9 +2,13 @@ body{
     background-image: url('../img/backgrounds/background6.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center center;
+    background-position-y: 0%;
     font-family: "harry_pregular";
-
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
@@ -28,6 +32,13 @@ body{
     }
   }
 
+  #trophy-div{
+    margin: 50px;
+  }
+
+  #trophy-div img{
+    height: 150px;
+  }
 
   .rotate {
     animation: rotation 2s infinite linear;
@@ -48,16 +59,21 @@ body{
 
 
   #characters-div{
+    width: 100%;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 10px;
+    margin: 50px 15px;
   }
 
 
   #characters-div img{
-    height: 30px;
+    height: 40px;
+  }
+
+  #characters-div img:hover{
+    height:70px;
   }
 
 
@@ -70,13 +86,14 @@ a {
   border: 1px solid red;
   padding: 10px;
   border-radius: 10px;
-  width: 50px;
+  width: 180px;
   background: transparent;
   color: red;
   letter-spacing: 4px;
   -webkit-animation-name: yellowPulse;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
+  text-align: center;
 }
 
 @-webkit-keyframes yellowPulse {
