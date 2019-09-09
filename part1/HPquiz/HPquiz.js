@@ -75,11 +75,11 @@ $(document).ready(function() {
           image: "https://media0.giphy.com/media/8l1UFvNSS5SwM/giphy.gif?cid=790b7611440215680f4fea638ba4cdd2dcb956678cbee277&rid=giphy.gif",
           comment:  " Not bad."}
         ,{
-          image: "https://media0.giphy.com/media/AisOYaOZdrS1i/giphy.gif?cid=790b7611b6cf677a7b07b124c4de40d2d2775ffa1ca25c3b&rid=giphy.gif",
-          comment: " Disappointing."}
-        ,{
           image: "https://media1.giphy.com/media/12nfFCZA0vyrSw/giphy.gif?cid=790b76115b4171068e37f414ba5ca598ae9f7026a443da77&rid=giphy.gif",
           comment: "Failure!"}
+        ,{
+          image: "https://media0.giphy.com/media/AisOYaOZdrS1i/giphy.gif?cid=790b7611b6cf677a7b07b124c4de40d2d2775ffa1ca25c3b&rid=giphy.gif",
+          comment: " Disappointing."}
         ];
     
     

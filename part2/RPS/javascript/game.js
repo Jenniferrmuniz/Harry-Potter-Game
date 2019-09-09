@@ -23,10 +23,10 @@ function sparkShower(startx, starty, sparkWidth, sparkHeight) {
 
   function initParticles() {
     currentlySparking = true;
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 400; i++) {
       setTimeout(function() {
         createParticle(i);
-        createParticle(i * 2);
+        createParticle(i * 3);
       }, i);
     }
   }
@@ -43,7 +43,7 @@ function sparkShower(startx, starty, sparkWidth, sparkHeight) {
     // velocity size?
     var vsize = 0;
     // randomize size and opacity a little & pick a color from our color palette
-    var size = 1 + Math.random();
+    var size = 0.7 + Math.random();
     var color = colors[Math.floor(Math.random() * colors.length)];
     var opacity = 0.5 + Math.random() * 0.5;
     var d = new Date();
@@ -75,8 +75,8 @@ function sparkShower(startx, starty, sparkWidth, sparkHeight) {
         vy += (ag * ((timeNow - lastTime) / 1000) * 4.7);
       lastTime = timeNow;
       x += vx;
-      y += vy;
-      if (y > (floor + 10)) this.finished = true;
+      y += vy*1.8;
+      if (y > (floor + 100)) this.finished = true;
       if (size < maxSize) size += vsize * z;
       if ((opacity < 0.5) && (y < floor)) {
         vsize = 0.55 - opacity;
@@ -85,8 +85,8 @@ function sparkShower(startx, starty, sparkWidth, sparkHeight) {
       }
       // add bouncing off the floor
       if (y > floor) {
-        vy = vy * -0.4;
-        vx = vx * 0.96;
+        vy = vy * -0.04;
+        vx = vx * 0.95;
       }
     };
 
@@ -131,7 +131,7 @@ function sparkShower(startx, starty, sparkWidth, sparkHeight) {
 }
 
 function infoButtonClick1() {
-
+    console.log("In Button 1 firework");
     let button = $(".rock")[0].getBoundingClientRect()
     var x = button.x + ( button.width / 2 )
     var y = button.y + ( button.height / 2)
@@ -139,11 +139,14 @@ function infoButtonClick1() {
   var sparkCanvas = $('#canvas');
   var sparkWidth = sparkCanvas.width();
   var sparkHeight = sparkCanvas.height();
+  console.log("Button 1 - x: ", x, ", y: ", y, ", width: ", sparkWidth, ", height: ", sparkHeight)
+  console.log(button.x, button.width)
 //   console.log(sparkWidth, sparkHeight, window.innerWidth, window.innerHeight)
   //var sparkHeight = $('.video-stream').position().top;
   sparkShower(x, y, sparkWidth, sparkHeight);
 }
 function infoButtonClick2() {
+  console.log("In Button 3 firework");
     let button = $(".paper")[0].getBoundingClientRect()
     var x = button.x + ( button.width / 2 )
     var y = button.y + ( button.height / 2)
@@ -151,11 +154,13 @@ function infoButtonClick2() {
   var sparkCanvas = $('#canvas');
   var sparkWidth = sparkCanvas.width();
   var sparkHeight = sparkCanvas.height();
+  console.log("Button 2 - x: ", x, ", y: ", y, ", width: ", sparkWidth, ", height: ", sparkHeight)
 //   console.log(sparkWidth, sparkHeight, window.innerWidth, window.innerHeight)
   //var sparkHeight = $('.video-stream').position().top;
   sparkShower(x, y, sparkWidth, sparkHeight);
   }
   function infoButtonClick3() {
+    console.log("In Button 3 firework");
     let button = $(".scissors")[0].getBoundingClientRect()
     var x = button.x + ( button.width / 2 )
     var y = button.y + ( button.height / 2)
@@ -163,6 +168,7 @@ function infoButtonClick2() {
   var sparkCanvas = $('#canvas');
   var sparkWidth = sparkCanvas.width();
   var sparkHeight = sparkCanvas.height();
+  console.log("Button 3 - x: ", x, ", y: ", y, ", width: ", sparkWidth, ", height: ", sparkHeight)
 //   console.log(sparkWidth, sparkHeight, window.innerWidth, window.innerHeight)
   //var sparkHeight = $('.video-stream').position().top;
   sparkShower(x, y, sparkWidth, sparkHeight);
@@ -187,10 +193,13 @@ var gameModule = (function () {
             overallResultText,
             character,
             choices = ['rock', 'paper', "scissors"];
+            // users = ['Harry', 'Ron', 'Hermione'];
+            // villians = ['Voldemort', 'Bellatrix', 'Lucius Malfoy']
+            // index = 0;
 
         // Text Variables
-        var playerWinsText = "You win the round!",
-            computerWinsText = "Computer wins the round!",
+        var playerWinsText = `You win the round!`,
+            computerWinsText = `Computer wins the round!`,
             tieText = "It's a Tie!",
             overallPlayerWinText = "<h2>Well Done!</h2> <p>You won against the computer!</p>",
             overallComputerWinText = "<h2>You Lose...</h2> <p>The computer has defeated you!</p>",
@@ -229,7 +238,6 @@ var gameModule = (function () {
             // Set the values on the screen
             setValues(playerChoice, computerChoice, winner);
 
-            
         }
 
         // Sets all the values on the board
@@ -264,6 +272,18 @@ var gameModule = (function () {
             $('.computer-score').text(computerScore); // The running score for the computer
 
         }
+
+        // function playerName(str) {
+        //   switch (str) {
+        //     case 1: str ==='Harry'
+        //       return "Harry"
+        //     case 2: str === 'Ron'
+        //     return "Ron"
+        //     case 3: str ==='Hermione'
+        //       return "Hermoine"
+        //   }
+        // }
+
 
         // Decide who wins based on the player & computer choice
         function decideWinner(playerChoice, computerChoice) {
@@ -355,9 +375,6 @@ var gameModule = (function () {
         // Decide on who is the winner of the whole game
         function overallWinner() {
 
-            
-    
-
             if (playerScore > computerScore) {
 
                 // Player wins
@@ -378,14 +395,8 @@ var gameModule = (function () {
 
             }
 
-            
-
             $('.end-result').html(overallResultText);
-
-
             $('.end-screen').attr('class', 'end-screen ' + overallResultClass);
-
-            
 
         }
 
@@ -396,7 +407,6 @@ var gameModule = (function () {
             $('.play-again').hide();
 
             overallWinner();
-
 
         }
 
@@ -453,14 +463,13 @@ var gameModule = (function () {
         $('.weapon li').on('click', function(e) {
 
             e.preventDefault();
-
             playerChoice = $(this).data('weapon');
 
             $('body').addClass('weapon-chosen');
+
             playGame(playerChoice);
 
             if (round > bestOf) {
-                
               var x = document.getElementById("play-again-btn");
               if (x.style.display === "none") {
                 x.style.display = "block";
@@ -473,25 +482,21 @@ var gameModule = (function () {
               overallWinner();
               console.log(overallWinner());
               if(overallResultClass == 'win'){
-                document.getElementById('modal-type').innerHTML += `<p>Good job! You won!</p><a href='../../../part3/index3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>Good job! You won!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               else if(overallResultClass == 'lose'){
-                document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../../../part3/index3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               else{
-                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../../../part3/index3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               document.getElementById('modal-type').className = `modal-content ${overallResultClass}-result`
               setTimeout(function() { 
                   document.getElementById('myModal').className = 'modal open';
                 },5500)
-                
-
-                //endGame();
+               // endGame();
 
             }
-
-
 
         });
 
@@ -521,12 +526,12 @@ var gameModule = (function () {
 
         });
 
-        function endGameRPS() {
-            // var answer = confirm("You won!");
-            // if (answer) {
-                window.open("../../../part3/index3.html", "_self");
-            // }
-        }
+//         function endGameRPS() {
+//             // var answer = confirm("You won!");
+//             // if (answer) {
+//                 window.open("../../../part3/index3.html", "_self");
+//             // }
+// //         }
 
     });
 

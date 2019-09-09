@@ -58,12 +58,10 @@ body{
   }
 
 
-
-
-
-
 #footies{
+    font-size: 13pt;
     position: relative;
+    margin: 0 20px;
 }
 
 
@@ -84,7 +82,7 @@ body{
     height: 0%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0, .5); /* Fallback color */
-    transition: all 0.5s;
+    transition: all 0.4s;
   }
   .modal.open {
       opacity: 1;
@@ -95,7 +93,7 @@ body{
 .modal-content {
     background-image: url('../img/backgrounds/old-paper.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 110%;
     margin: 10% auto; /* 15% from the top and centered */
     padding: 15px;
     border: 1px solid #888;
@@ -127,31 +125,40 @@ body{
 }
 
 .map-icon{
-    margin: 120px 15px;
-    width: 70px;
+    margin: 90px 10px;
+    width: 100px;
     opacity: .75;
 }
 
+#writing h1{
+    font-size: 17pt;
+}
+
 .arrow{
-    height: 25px;
+    height: 20px;
 
 }
 
-
 #writing{
     block-size: 100%;
-    margin:15px;
+    margin: 22px;
 }
 
 #welcome{
     font-weight: 900;
-    font-size: 20px;
+    font-size: 25pt;
 }
 #writing li{
-    list-style-type: none;
+    list-style-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwikgNT3nsHkAhUGd98KHfqKBWoQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.sccpre.cat%2Fshow%2FJiomwh_harry-potter-wands-png-transparent-background-harry-potter%2F&psig=AOvVaw25dgfonPt4zM0TZ77MvB6I&ust=1568032638038402");
 }
 
-
+.albus-sign .signature{
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+    width: 50%;
+    height: 30%;
+}
 
 #mischief-btn{
     block-size: 100%;
@@ -163,7 +170,7 @@ body{
 #mischief-btn button{
     background-color: rgba(255, 255, 255, .6);
     border: 3px inset black;
-    margin-top: 15px;
+    margin-top: 35px;
 }
 
 

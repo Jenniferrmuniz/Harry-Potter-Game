@@ -40,10 +40,10 @@ li {
 }
 
 button {
-      width: 220px;
+      width: 260px;
       font-size: 20px;
       margin:12px 0;
-      padding: 10px 0;
+      padding: 10px 15px;
       background-color: black;
       color: #fff;
       font-family: 'Cinzel', serif;
