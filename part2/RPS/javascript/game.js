@@ -177,6 +177,7 @@ function infoButtonClick2() {
 
 //-------------------------------------------//
 
+let i, j;
 var gameModule = (function () {
 
     $(function() {
@@ -199,10 +200,27 @@ var gameModule = (function () {
            // Set what character is chosen and start the game
            let user = "";
          userChar = $('.choose-character li').on('click', function(e) {
-
           e.preventDefault();
-          user = setCharacter($(this), '.player-character');
+          setCharacter($(this), '.player-character');
           nextScreen($(this));
+          console.log(this);
+  
+          let user = this.className;
+          if(this.className == 'character1'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(1)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/harry-wand.png'>`
+            i = 0;
+          }
+          else if(this.className == 'character2'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(1)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/ron-wand.png'>`
+            i=1;
+          }
+          else if(this.className == 'character3'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(1)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/hermione-wand.png'>`
+            i = 2;
+          }
+
+          
+          console.log(i);
           return console.log(user);
       });
 
@@ -211,8 +229,26 @@ var gameModule = (function () {
       villianChar = $('.choose-rival li').on('click', function(e) {
 
           e.preventDefault();
-          villian = setCharacter($(this), '.computer-character');
+          setCharacter($(this), '.computer-character');
           $('body').addClass('game-started');
+
+
+          let villian = this.className;
+          if(this.className == 'comp1'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(3)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/voldemort.png'>`
+            j = 0;
+          }
+          else if(this.className == 'comp2'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(3)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/bellatrix.png'>`
+
+            j=1;
+          }
+          else if(this.className == 'comp3'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(3)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/lucius.png'>`
+            j = 2;
+          }
+          console.log(j);
+
           return console.log(villian);
       });
 
@@ -539,20 +575,6 @@ var gameModule = (function () {
 
         });
 
-//         function endGameRPS() {
-//             // var answer = confirm("You won!");
-//             // if (answer) {
-//                 window.open("../../../part3/index3.html", "_self");
-//             // }
-// //         }
-
-  
-//         function endGameRPS() {
-//             // var answer = confirm("You won!");
-//             // if (answer) {
-//                 window.open("../../../part3/index3.html", "_self");
-//             // }
-// //         }
 
     });
 

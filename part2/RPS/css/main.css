@@ -991,7 +991,8 @@ h3 {
   PLAYERS
 ==========================================*/
 .players {
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1155,4 +1156,12 @@ a { color: #CCC }
   opacity: 1;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
+}
+
+
+
+.chosenPlayerImg{
+  position: fixed;
+  z-index: 200;
+  block-size: 100px;
 }
