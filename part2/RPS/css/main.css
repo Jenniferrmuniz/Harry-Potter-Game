@@ -311,7 +311,7 @@ animation:move-clouds-back 200s linear infinite;
   border-radius: 5px;
 }
 .button.active {
-  background-color: #4284A4;
+  background-color: rgb(255, 255, 0);
   color: #333;
 }
 @media only screen and (min-width: 800px) {
@@ -319,7 +319,7 @@ animation:move-clouds-back 200s linear infinite;
     color: #333;
   }
   .button.active:hover:before, .button.active:hover:after {
-    background-color: 4284A4;
+    background-color: rgb(255, 255, 0);
   }
 }
 .button:before, .button:after {
@@ -329,7 +329,7 @@ animation:move-clouds-back 200s linear infinite;
   width: 51%;
   height: 100%;
   top: 0;
-  background-color: #4284A4;
+  background-color: rgb(255, 255, 0);
   transition: 0.4s ease-out all;
 }
 .button:before {
@@ -599,7 +599,7 @@ h3 {
   .choose-character li:hover,
   .choose-rival li:hover {
     border-color: rgb(255, 255, 255, 0.6);
-    background-color: #4284A4;
+    background-color: rgb(255, 255, 0);
     transition: 0.4s ease-out all;
     
   }
@@ -756,7 +756,7 @@ h3 {
     margin: 0 4rem;
   }
   .weapon li:hover {
-    background-color: #4284A4;
+    background-color: rgba(255, 255, 0);
     border-color: white;
     transition: 0.4s ease-out all;
   }
