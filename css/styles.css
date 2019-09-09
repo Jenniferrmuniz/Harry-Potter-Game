@@ -21,45 +21,52 @@ body{
   }
   
 .game-intro p {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 24px;
+    font-weight: bold;
     color: rgb(255, 255, 0);
-    width: 80%;
+    width: 85%;
   }
 
 .character-talking{
     display:flex;
-    flex-direction: row;
-    
- 
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center
   }
+
+.character-talking img {
+  width: 200px;
+  height: 200px;
+  margin-right: 140px;
+}
 
 .speech-bubble {
     position: relative;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .7);
     border-radius: 4em;
     display:flex;
     align-items: center;
     justify-content: center;
     width:50%; 
-    height: 50%;
-    margin-left: 35px;
+    height: 45%;
+    margin-left: 50px;
+    margin-bottom: 40px;
    }
 
-
-  
 .speech-bubble:after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 20%;
+    left: 40%;
+    width: 0.4%;
     height: 20%;
     border: 52px solid transparent;
-    border-top-color: rgba(255, 255, 255, .5);
+    border-top-color: rgba(255, 255, 255, .7);
     border-bottom: 0;
     border-left: 0;
-    margin-left: -26px;
+    margin-left: -15px;
     margin-bottom: -52px;
   }
 
@@ -100,9 +107,6 @@ body{
 #start-button:focus {
     outline:none;
 }
-
-  
-  
   
   #game-board {
       float: left;
@@ -111,10 +115,6 @@ body{
       margin: 75px;
   }
   
-
-
-
-
 
 /* The Modal (background) */
 .modal {
