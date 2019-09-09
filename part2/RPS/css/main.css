@@ -992,9 +992,10 @@ h3 {
 ==========================================*/
 .players {
   margin-top: 3rem;
-  margin-bottom: 6rem;
+  margin-bottom: 175px;
+  margin-right: 75px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #333;
 }
@@ -1162,6 +1163,6 @@ a { color: #CCC }
 
 .chosenPlayerImg{
   position: fixed;
-  z-index: 200;
+  z-index: 90;
   block-size: 100px;
 }
