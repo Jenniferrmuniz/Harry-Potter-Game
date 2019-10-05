@@ -76,7 +76,6 @@ console.log('hi');
         
         //Adding the item in the body
         document.body.appendChild(footprint);
-        //$('.modal .modal-content').append(footprint)
     }
 
     //Call the walk () function every second
