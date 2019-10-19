@@ -62,9 +62,9 @@ console.log('hi');
     
         //Element creation
 	    var footprint = document.createElement('img');
-            footprint.setAttribute("src","../img/icons-&-items/footprint.png");
-            footprint.setAttribute("width", "40px");
-            footprint.setAttribute("height", "40px");
+      footprint.setAttribute("src","../img/icons-&-items/footprint.png");
+      footprint.setAttribute("width", "40px");
+      footprint.setAttribute("height", "40px");
 	    footprint.style.position="absolute";
 	    footprint.style.left=x+"px";
 	    footprint.style.top=y+"px";
