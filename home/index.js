@@ -14,12 +14,9 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
     console.log('hiiii')
 // Get the modal
-    //modal.style.display = "block";
-    //modal = document.getElementById("myModal");
+
     modal.className = 'open modal';
 
-    // var NavWidth=$(modal).width();
-    // var NavHeight = $(modal).height();
 
     var NavWidth = window.innerWidth;
     var NavHeight = window.innerHeight;
