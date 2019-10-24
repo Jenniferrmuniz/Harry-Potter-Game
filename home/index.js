@@ -25,10 +25,8 @@ btn.onclick = function() {
     var rotation = 0;
     var crit = 0;
 
-    console.log(NavHeight, NavWidth)
 
 
-console.log('hi');
 
     function walk() {	
 	    //Random rotation
